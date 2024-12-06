@@ -13,6 +13,9 @@ app.use(express.json());
 app.use(cors());
 
 // API routes
+
+// vercel.logs /favicon.ico sever time out
+app.get('/favicon.ico', (req, res) => res.status(204).end());
 app.get('/', (req, res) => res.send('api working...'));
 
 app.listen(PORT, () => console.log(`Server is running on port: ${PORT}`));
