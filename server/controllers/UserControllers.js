@@ -17,7 +17,7 @@ const clerkWebHooks = async (req, res) => {
       case 'user.created': {
         const userData = {
           clerkId: data.id,
-          email: data.email_addresses[0].email_address,
+          emailId: data.email_addresses[0].email_address,
           firstName: data.first_name,
           lastName: data.last_name,
           profilePicture: data.image_url,
@@ -29,7 +29,7 @@ const clerkWebHooks = async (req, res) => {
 
       case 'user.updated': {
         const userData = {
-          email: data.email_addresses[0].email_address,
+          emailId: data.email_addresses[0].email_address,
           firstName: data.first_name,
           lastName: data.last_name,
           profilePicture: data.image_url,
